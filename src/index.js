@@ -3,7 +3,10 @@ export default router =>
     const watch = {}
 
     data.forEach(name =>
-      watch[name] = value => router.setState({ name: value })
+      watch[name] = {
+        deep: true,
+        handler: value => router.setState({ [name]: value })
+      }
     )
 
     return {

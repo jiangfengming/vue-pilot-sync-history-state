@@ -4,12 +4,19 @@
   "description": "",
   "main": "dist/index.js",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "eslint": "^6.3.0",
     "eslint-config-enough": "^0.3.8",
     "eslint-loader": "^3.0.0",
     "eslint-plugin-vue": "^5.2.3",
     "file-loader": "^4.2.0",
+    "rollup": "^1.20.3",
+    "rollup-plugin-babel": "^4.3.3",
     "style-loader": "^1.0.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
@@ -19,7 +26,8 @@
     "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
-    "dev": "webpack-dev-server --hot --config dev/webpack.config.js"
+    "dev": "webpack-dev-server --hot --config dev/webpack.config.js",
+    "build": "rollup -c rollup.config.esm.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +43,6 @@
   },
   "homepage": "https://github.com/jiangfengming/vue-pilot-sync-history-state#readme",
   "dependencies": {
-    "vue-pilot": "^0.14.2"
+    "vue-pilot": "^0.14.3"
   }
 }

@@ -1,30 +1,36 @@
 <template>
   <main>
-    <input v-model="name" type="text">
+    <input v-model="string" type="text">
+    <button @click="changeArray">changeArray</button>
+    <button @click="changeObject">changeObject</button>
+    <pre>{{ array }}</pre>
+    <pre>{{ object }}</pre>
   </main>
 </template>
 
 <script>
-import syncHistoryState from './syncHistoryState'
+import { syncHistoryState } from './router'
 
 export default {
   mixins: [
-    syncHistoryState('name', 'array', 'object')
+    syncHistoryState('string', 'array', 'object')
   ],
 
   data: () => ({
-    name: '',
+    string: '',
     array: [],
-    object: {}
+    object: {
+      a: 1
+    }
   }),
 
   methods: {
     changeArray() {
-      this.array.push(Date.now())
+      this.array.push(Math.random())
     },
 
     changeObject() {
-      this.object[Date.now()] = Date.now()
+      this.object.a = Math.random()
     }
   }
 }

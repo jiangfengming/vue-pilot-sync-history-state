@@ -1,4 +1,7 @@
 {
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
   "extends": [
     "enough",
     "plugin:vue/recommended"
@@ -8,6 +11,7 @@
     "node": true
   },
   "rules": {
-    "vue/max-attributes-per-line": "off"
+    "vue/max-attributes-per-line": "off",
+    "vue/singleline-html-element-content-newline": "off"
   }
 }
