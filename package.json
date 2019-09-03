@@ -20,6 +20,7 @@
     "style-loader": "^1.0.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
+    "vue-pilot": "^0.14.3",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
@@ -41,8 +42,5 @@
   "bugs": {
     "url": "https://github.com/jiangfengming/vue-pilot-sync-history-state/issues"
   },
-  "homepage": "https://github.com/jiangfengming/vue-pilot-sync-history-state#readme",
-  "dependencies": {
-    "vue-pilot": "^0.14.3"
-  }
+  "homepage": "https://github.com/jiangfengming/vue-pilot-sync-history-state#readme"
 }
